@@ -1,4 +1,3 @@
-import 'package:case_study/models/user_model.dart';
 import 'package:case_study/providers/departure.dart';
 import 'package:case_study/providers/login.dart';
 import 'package:case_study/providers/ticket.dart';

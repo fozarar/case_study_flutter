@@ -70,24 +70,24 @@ class _TicketsOverviewPageState extends State<TicketsOverviewPage> {
             elevation: 10,
             child: Column(
               children: [
-                _isLoading
-                    ? Center(
-                        child: CircularProgressIndicator(),
-                      )
-                    : Container(
-                        decoration: BoxDecoration(
-                            gradient: LinearGradient(
-                                begin: Alignment.topCenter,
-                                end: Alignment.bottomCenter,
-                                colors: [
-                              grTop,
-                              grBottom,
-                            ])),
-                        child: Column(
-                          children: <Widget>[
-                            Column(
-                              children: [
-                                TicketCardTitle(
+                Container(
+                  decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                          begin: Alignment.topCenter,
+                          end: Alignment.bottomCenter,
+                          colors: [
+                        grTop,
+                        grBottom,
+                      ])),
+                  child: Column(
+                    children: <Widget>[
+                      Column(
+                        children: [
+                          _isLoading
+                              ? Center(
+                                  child: CircularProgressIndicator(),
+                                )
+                              : TicketCardTitle(
                                   passengerName: ticketModel!.passengerName!,
                                   seatNu: ticketModel!.seatNu!,
                                   departureCity: ticketModel!.departureCity!,
@@ -103,11 +103,11 @@ class _TicketsOverviewPageState extends State<TicketsOverviewPage> {
                                   bookingNumber: ticketModel!.bookingNumber!,
                                   qrCode: ticketModel!.qrCode!,
                                 ),
-                              ],
-                            ),
-                          ],
-                        ),
+                        ],
                       ),
+                    ],
+                  ),
+                ),
               ],
             )),
       ),
