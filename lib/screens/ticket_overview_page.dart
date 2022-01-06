@@ -5,7 +5,6 @@ import 'package:case_study/widgets/custom_ticket_card_headlines.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../constants.dart';
-import 'login_screen.dart';
 
 class TicketsOverviewPage extends StatefulWidget {
   static const routeName = '/tickets';
